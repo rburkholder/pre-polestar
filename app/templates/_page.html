@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Quovadis Data</title>
+    </head>
+  <body>
+    <h1>Quovadis</h1>
+    <div>
+      <ul>
+        <li><a href="{{ url_for('root') }}">Start</a>
+        <li><a href="{{ url_for('organizations') }}">Organizations</a>
+        <li><a href="{{ url_for('ipaddresses') }}">IP Addresses</a>
+        <li><a href="{{ url_for('hosttypes') }}">Host Types</a>
+        <li><a href="{{ url_for('hosts') }}">Hosts</a>
+        <li><a href="{{ url_for('circuits') }}">Circuits</a>
+        <li><a href="{{ url_for('interfaces') }}">Interfaces</a>
+        </ul>
+      </div>
+
+    <div>{% block content %}{% endblock %}</div>
+    </body>
+  </html>

@@ -1,0 +1,29 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% if 'add' == mode %}
+  <h1>Add Host Type</h1>
+  <form action="" method="post" name="hosttype_add">
+  {% endif %}
+{% if 'edit' == mode %}
+  <h1>Edit Host Type</h1>
+  <form action="" method="post" name="hosttype_edit">
+  {% endif %}
+{{form.hidden_tag()}}
+  <table>
+    <tr>
+      <td align="right">name:</td>
+      <td>{{form.name(size=50)}}
+      </tr>
+    <tr>
+      <td align="right">description:</td>
+      <td>{{form.description(size=100)}}</td>
+      </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Save Changes"></td>
+    </table>
+  </form>
+
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% for hosttype in hosttypes %}
+<div><p>{{hosttype.name}}
+  {% if hosttype.description %}, {{hosttype.description}} {% endif %}
+  --
+  <a href="{{ url_for('hosttype_edit', idhosttype=hosttype.idhosttype) }}" >Edit</a> |
+  <a href="{{ url_for('hosttype_delete', idhosttype=hosttype.idhosttype) }}" >Delete</a>
+</p></div>
+{% endfor %}
+
+<div><p><a href="{{ url_for('hosttype_add') }}">Add Host Type</a>
+
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% for interface in interfaces %}
+<div><p>{{interface.name}}
+   {% if interface.description %}     ({{interface.description}}) {% endif %}
+   {% if interface.url %}     ({{interface.url}}) {% endif %}
+   {% if interface.fqdn %}     ({{interface.fqdn}}) {% endif %}
+  --
+  <a href="{{ url_for('interface_edit', idinterface=interface.idinterface) }}" >Edit</a> |
+  <a href="{{ url_for('interface_delete', idinterface=interface.idinterface) }}" >Delete</a>
+</p></div>
+{% endfor %}
+
+<div><p><a href="{{ url_for('interface_add') }}">Add Interface</a>
+
+{% endblock %}

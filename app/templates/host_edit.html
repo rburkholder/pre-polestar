@@ -1,0 +1,45 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% if 'add' == mode %}
+  <h1>Add Host</h1>
+  <form action="" method="post" name="host_add">
+  {% endif %}
+{% if 'edit' == mode %}
+  <h1>Edit Host</h1>
+  <form action="" method="post" name="host_edit">
+  {% endif %}
+{{form.hidden_tag()}}
+  <table>
+    <tr>
+      <td align="right">name:</td>
+      <td>{{form.name(size=50)}}
+      </tr>
+    <tr>
+      <td align="right">host type:</td>
+      <td>{{form.idhosttype}}</td>
+      </tr>
+    <tr>
+      <td align="right">parent:</td>
+      <td>{{form.parent}}</td>
+      </tr>
+    <tr>
+      <td align="right">description:</td>
+      <td>{{form.description(size=100)}}</td>
+      </tr>
+    <tr>
+      <td align="right">url1:</td>
+      <td>{{form.url1(size=50)}}</td>
+      </tr>
+    <tr>
+      <td align="right">url2:</td>
+      <td>{{form.url2(size=50)}}</td>
+      </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Save Changes"></td>
+    </table>
+  </form>
+
+{% endblock %}
+

@@ -1,0 +1,42 @@
+{% extends "_page.html" %}
+{% block content %}
+
+<h1>Edit Organization</h1>
+{% if 'add' == mode %}
+  <form action="" method="post" name="organization_add">
+  {% endif %}
+{% if 'edit' == mode %}
+  <form action="" method="post" name="organization_edit">
+  {% endif %}
+{{form.hidden_tag()}}
+  <table>
+    <tr>
+      <td align="right">id:</td>
+      <td>
+        {% if 'edit' == mode %}{{org.idorganization}}{% endif %}
+        {% if 'add' == mode %}{{form.idorganization(size=4)}}{% endif %}
+      </tr>
+    <tr>
+      <td align="right">name:</td>
+      <td>{{form.name(size=30)}}</td>
+      </tr>
+    <tr>
+      <td align="right">description:</td>
+      <td>{{form.description(size=50)}}</td>
+      </tr>
+    <tr>
+      <td align="right">asn:</td>
+      <td>{{form.asn(size=10)}}</td>
+      </tr>
+    <tr>
+      <td align="right">url:</td>
+      <td>{{form.url(size=50)}}</td>
+      </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Save Changes"></td>
+    </table>
+  </form>
+
+{% endblock %}
+

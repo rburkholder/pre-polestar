@@ -1,0 +1,18 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% for address in ipaddresses %}
+<div><p>{{address.idorganization}}: {{address.ipaddress}}
+  {% if address.parent %}     ({{address.parent}}) {% endif %}
+  {% if address.name %}, {{address.name}} {% endif %}
+  {% if address.description %}, {{address.description}} {% endif %}
+  {% if address.url %}, {{address.url}} {% endif %}
+  --
+  <a href="{{ url_for('ipaddress_edit', idipaddress=address.idipaddress) }}" >Edit</a> |
+  <a href="{{ url_for('ipaddress_delete', idipaddress=address.idipaddress) }}" >Delete</a>
+</p></div>
+{% endfor %}
+
+<div><p><a href="{{ url_for('ipaddress_add') }}">Add IP Address</a>
+
+{% endblock %}

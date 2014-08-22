@@ -1,0 +1,16 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% for circuit in circuits %}
+<div><p>{{circuit.name}}
+  {% if circuit.description %}     ({{circuit.description}}) {% endif %}
+  {% if circuit.url %}     ({{circuit.url}}) {% endif %}
+  --
+  <a href="{{ url_for('circuit_edit', idcircuit=circuit.idcircuit) }}" >Edit</a> |
+  <a href="{{ url_for('circuit_delete', idcircuit=circuit.idcircuit) }}" >Delete</a>
+</p></div>
+{% endfor %}
+
+<div><p><a href="{{ url_for('circuit_add') }}">Add Circuit</a>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% for host in hosts %}
+<div><p>{{host.name}}
+  {% if host.description %}     ({{host.description}}) {% endif %}
+  {% if host.url1 %}     ({{host.url1}}) {% endif %}
+  {% if host.url2 %}     ({{host.url2}}) {% endif %}
+  --
+  <a href="{{ url_for('host_edit', idhost=host.idhost) }}" >Edit</a> |
+  <a href="{{ url_for('host_delete', idhost=host.idhost) }}" >Delete</a>
+</p></div>
+{% endfor %}
+
+<div><p><a href="{{ url_for('host_add') }}">Add Host</a>
+
+{% endblock %}

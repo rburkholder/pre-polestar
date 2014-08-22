@@ -1,0 +1,86 @@
+designer:  
+  http://ondras.zarovi.cz/sql/demo/
+  schema is in designer.xml
+  http://code.google.com/p/wwwsqldesigner/wiki/Manual
+  http://code.google.com/p/wwwsqldesigner/w/list
+
+virtual python environment:
+. env/bin/activate
+
+to start database:
+python data.py
+
+redirect localhost to destination server for web access to rethinkdb dataexplorer:
+http://localhost:8080/#dataexplorer
+
+
+example for flask:
+http://www.realpython.com/blog/python/rethink-flask-a-simple-todo-list-powered-by-flask-and-rethinkdb
+
+flask tutorial:
+http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+rethinkdb quick intro:
+http://blog.justonepixel.com/geek/2013/04/05/quickstart-reql/
+
+rethinkdb driver performance: (python 2.7 vs 3.0 are different)
+http://rethinkdb.com/docs/driver-performance/
+
+rethinkdb databmodelling
+http://www.rethinkdb.com/docs/data-modeling/
+
+rethinkdb docs:
+http://rethinkdb.com/docs/
+
+flask quick start:
+http://flask.pocoo.org/docs/quickstart/
+http://flask.pocoo.org/docs/
+
+virtualenv to separate 2.7 from 3.0
+http://www.virtualenv.org/en/latest/virtualenv.html
+
+wtforms:
+http://wtforms.readthedocs.org/en/latest/
+http://wtforms.simplecodes.com/docs/0.6.1/fields.html
+http://wtforms.simplecodes.com/docs/0.6.1/index.html
+
+flask wtf
+https://flask-wtf.readthedocs.org/en/latest/
+
+python docs:
+https://docs.python.org/2/reference/index.html
+
+template designer (jinja2):
+http://jinja.pocoo.org/docs/templates/
+
+python programming faq, covers pass by reference options
+https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference
+
+bpython:
+http://docs.bpython-interpreter.org
+
+
+================
+
+sudo apt-get install build-essential
+sudo apt-get install python-dev
+virtualenv env
+. env/bin/activate
+pip install flask==0.9
+pip install flask-login
+pip install flask-openid
+pip install flask-mail==0.7.6
+pip install sqlalchemy==0.7.9
+pip install flask-sqlalchemy==0.16
+pip install sqlalchemy-migrate==0.7.2
+pip install flask-whooshalchemy==0.55a
+pip install flask-wtf==0.8.4
+pip install pytz==2013b
+pip install flask-babel==0.8
+pip install flup
+
+mkdir app
+mkdir app/static
+mkdir app/templates
+mkdir tmp
+

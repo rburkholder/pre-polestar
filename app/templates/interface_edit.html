@@ -1,0 +1,57 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% if 'add' == mode %}
+  <h1>Add Interface</h1>
+  <form action="" method="post" name="interface_add">
+  {% endif %}
+{% if 'edit' == mode %}
+  <h1>Edit Interface</h1>
+  <form action="" method="post" name="interface_edit">
+  {% endif %}
+{{form.hidden_tag()}}
+  <table>
+    <tr>
+      <td align="right">parent:</td>
+      <td>{{form.parent}}</td>
+      </tr>
+    <tr>
+      <td align="right">ip address:</td>
+      <td>{{form.idipaddress}}</td>
+      </tr>
+    <tr>
+      <td align="right">circuit:</td>
+      <td>{{form.idcircuit}}</td>
+      </tr>
+    <tr>
+      <td align="right">host:</td>
+      <td>{{form.idhost}}</td>
+      </tr>
+    <tr>
+      <td align="right">name:</td>
+      <td>{{form.name(size=50)}}
+      </tr>
+    <tr>
+      <td align="right">description:</td>
+      <td>{{form.name(size=50)}}</td>
+      </tr>
+    <tr>
+      <td align="right">url:</td>
+      <td>{{form.url(size=50)}}</td>
+      </tr>
+    <tr>
+      <td align="right">fqdn:</td>
+      <td>{{form.fqdn(size=50)}}</td>
+      </tr>
+    <tr>
+      <td align="right">mac:</td>
+      <td>{{form.mac(size=20)}}
+      </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Save Changes"></td>
+    </table>
+  </form>
+
+{% endblock %}
+

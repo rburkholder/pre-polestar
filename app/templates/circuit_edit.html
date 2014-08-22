@@ -1,0 +1,41 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% if 'add' == mode %}
+  <h1>Add Circuit</h1>
+  <form action="" method="post" name="circuit_add">
+  {% endif %}
+{% if 'edit' == mode %}
+  <h1>Edit Circuit</h1>
+  <form action="" method="post" name="circuit_edit">
+  {% endif %}
+{{form.hidden_tag()}}
+  <table>
+    <tr>
+      <td align="right">name:</td>
+      <td>{{form.name(size=50)}}
+      </tr>
+    <tr>
+      <td align="right">parent:</td>
+      <td>{{form.parent}}</td>
+      </tr>
+    <tr>
+      <td align="right">ip address:</td>
+      <td>{{form.idipaddress}}</td>
+      </tr>
+    <tr>
+      <td align="right">description:</td>
+      <td>{{form.description(size=100)}}</td>
+      </tr>
+    <tr>
+      <td align="right">url:</td>
+      <td>{{form.url(size=50)}}</td>
+      </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Save Changes"></td>
+    </table>
+  </form>
+
+{% endblock %}
+

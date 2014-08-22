@@ -1,0 +1,45 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% if 'add' == mode %}
+  <h1>Add IP Address</h1>
+  <form action="" method="post" name="ipaddress_add">
+  {% endif %}
+{% if 'edit' == mode %}
+  <h1>Edit IP Address</h1>
+  <form action="" method="post" name="ipaddress_edit">
+  {% endif %}
+{{form.hidden_tag()}}
+  <table>
+    <tr>
+      <td align="right">ip address:</td>
+      <td>{{form.ipaddress(size=16)}}
+      </tr>
+    <tr>
+      <td align="right">name:</td>
+      <td>{{form.name(size=30)}}</td>
+      </tr>
+    <tr>
+      <td align="right">parent:</td>
+      <td>{{form.parent}}</td>
+      </tr>
+    <tr>
+      <td align="right">idorganization:</td>
+      <td>{{form.idorganization}}</td>
+      </tr>
+    <tr>
+      <td align="right">description:</td>
+      <td>{{form.description(size=50)}}</td>
+      </tr>
+    <tr>
+      <td align="right">url:</td>
+      <td>{{form.url(size=50)}}</td>
+      </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Save Changes"></td>
+    </table>
+  </form>
+
+{% endblock %}
+

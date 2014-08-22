@@ -1,0 +1,14 @@
+{% extends "_page.html" %}
+{% block content %}
+
+{% for org in organizations %}
+<div><p>{{org.idorganization}}: {{org.name}} ( {{org.description}} )
+  --
+  <a href="{{ url_for('organization_edit', idorganization=org.idorganization) }}" >Edit</a> |
+  <a href="{{ url_for('organization_delete', idorganization=org.idorganization) }}" >Delete</a>
+</p></div>
+{% endfor %}
+
+<div><p><a href="{{ url_for('organization_add') }}">Add Organization</a>
+
+{% endblock %}
