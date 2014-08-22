@@ -22,3 +22,8 @@ new polestar project, still in python, but utilizing postgresql as the backend. 
 will be posted when something useful emerges.
 
 Side related topics can be seen at http://blog.raymond.burkholder.net
+
+And of course, you ask, what does it do.  It represents the beginning thoughts on how to manage the 
+layer 1, layer 2 and layer 3 infrastructure of a service provider's network infrastructure.  The 
+information contained here-in would be used for populating DNS tables, insfrastructure maps, 
+monitoring thingys, ....
