@@ -1,6 +1,8 @@
 pre-polestar
 ============
 
+<< this project is no longer active, my recent thoughts are reflected in my 'nodestar' project >>
+
 This is a quick prototype to test python, flask, and rethinkdb
 
 The rethinkdb schema is described in designer.xml, and can be cut/paste into http://ondras.zarovi.cz/sql/demo/
